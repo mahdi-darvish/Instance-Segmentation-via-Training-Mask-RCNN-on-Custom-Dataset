@@ -2,3 +2,6 @@
 mask_rcnn_coco.h5
 
 /path_to_directory
+/logs
+
+
