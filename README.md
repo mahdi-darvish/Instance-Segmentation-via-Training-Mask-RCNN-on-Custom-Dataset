@@ -24,6 +24,13 @@ Another challenge was finding the masks. A CSV file with the data containing ima
 
 ## Results
 
+Here, you can see the model's results on some test images.
+
+![up-1](/images/up-1.jpg)
+
+![up-2](/images/up-2.jpg)
+
+![up-3](/images/up-3.jpg)
 
 
 ## Refrences
