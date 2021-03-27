@@ -10,7 +10,11 @@
 
 Python 3.8.6, TensorFlow 2.4.1, Keras 2.4.3, and other common packages listed in requirements.txt.Using `tensorflow-gpu` is also an option that decreases the training time substantially.
 
-You can use $ pip install -r requirements.txt inside your virtual environment to install them all or do it manually.
+In addition, you need to clone the Mask R-CNN repo from [here](https://github.com/matterport/Mask_RCNN) using this command:
+    
+    > `$ git clone https://github.com/matterport/Mask_RCNN.git`
+
+You can use `$ pip install -r requirements.txt` inside your virtual environment to install them all or do it manually.
 
 ## Open Images Dataset V6 (2020)
 
@@ -27,7 +31,7 @@ In segmentation, we try to differentiate objects not just by creating a bounding
 ### Instance vs Semantic Segmentation 
 To be more precise, there are two different types of segmentation. Semantic segmentation focuses on creating a mask for all objects that fit in the same class and can not differentiate the instances of that object. However, Instance segmentation focuses on the countable objects and makes individual masks for each thing. 
 
-![ivss](ivss.webp)
+![ivss](/images/ivss.webp)
 
 There are two technics to create the instance segmentation masks: Proposal-based and FCN-based.
 
