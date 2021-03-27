@@ -39,6 +39,14 @@ You can find some papers about these methods also with better explanations than 
 
 ## Mask R-CNN
 
+Mask R-CNN derives from work of faster R-CNN and FCN architecture. It first creates ROIs via a ConvNet, then uses bounding box regression heads and classification heads to determine the object in the specific region of interest. But the great part is it uses a fully connected network. So it kind of takes the best of both works, the power of faster R-CNN, the proposals and detection. It is also using the FCN for semantic segmentation.
+
+![mask-rcnn](/images/rcnn.PNG)
+
+As you can see in the illustration above, the regions of intreset will be pooled by an operation similar to ROIpooling. However, it is slightly different to keep all the data and solves the problem of ROIpooling for this problem; it's called "ROIalign". The whole idea is to convert any bounding box size to a fixed representation so then we can predict the class box, and with the series of convolution layers, we can also predict the mask.
+The mask loss is a binary cross-entropy per pixel for the k semantic classes that means we try to predict semantic category for a particular instance directly.
+
+The problem with Mask R-CNN is when two instances of the same class overlap and appear in the same bounding box, and it messes up the algorithm because it calculates the loss from the bounding box. It cannot differentiate the loss for both objects in a bounding box. As you can see in the Results section, some of the pumpkins that were clumped up together didn't get a proper mask.
 
 ## Results
 
