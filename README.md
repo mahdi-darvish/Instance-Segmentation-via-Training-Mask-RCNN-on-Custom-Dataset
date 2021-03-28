@@ -12,7 +12,7 @@ Python 3.8.6, TensorFlow 2.4.1, Keras 2.4.3, and other common packages listed in
 
 In addition, you need to clone the Mask R-CNN repo from [here](https://github.com/matterport/Mask_RCNN) using this command:
     
-    > `$ git clone https://github.com/matterport/Mask_RCNN.git`
+     $ git clone https://github.com/matterport/Mask_RCNN.git
 
 You can use `$ pip install -r requirements.txt` inside your virtual environment to install them all or do it manually.
 
